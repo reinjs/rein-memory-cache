@@ -1,0 +1,24 @@
+{
+  "name": "@reinjs/rein-memory-cache",
+  "version": "1.0.0",
+  "description": "The memory cache of rein",
+  "author": "reinjs",
+  "license": "MIT",
+  "dependencies": {
+    "node-cache": "^4.2.0"
+  },
+  "devDependencies": {
+    "@reinjs/rein-cli": "^1.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:reinjs/rein-memory-cache.git"
+  },
+  "plugin": {
+    "name": "memory"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/rc init @reinjs/rein-memory-cache",
+    "dev": "NODE_ENV=dev node index.js --service.name=rein-memory-cache --service.tag=dev --service.port=8080"
+  }
+}
